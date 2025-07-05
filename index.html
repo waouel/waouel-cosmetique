@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waouel Cosmétique - Pour des cheveux qui déchirent !</title>
+    <meta name="description" content="Découvrez Waouel Cosmétique, la marque premium qui unit l'expertise coréenne aux trésors marocains pour des cheveux exceptionnels.">
+    <meta name="keywords" content="cosmétique capillaire, soins cheveux premium, K-beauty, huiles marocaines, shampoing anti-chute">
+    
+    <style>
+        /* === VARIABLES CSS AMÉLIORÉES === */
+        :root {
+            --rose-gold: #E8B4A0;
+            --rose-poudrй: #F4E4E0;
+            --navy-luxe: #2A3A5C;
+            --bronze-premium: #B8860B;
+            --blanc-nacre: #FAF8F6;
+            --gris-marbre: #F0F0F0;
+            --noir-élégant: #1C1C1E;
+            --gradient-hero: linear-gradient(135deg, #E8B4A0 0%, #F4E4E0 50%, #2A3A5C 100%);
+            --gradient-premium: linear-gradient(135deg, #B8860B, #E8B4A0);
+            --gradient-bottle: linear-gradient(145deg, #2A3A5C 0%, #4A5D7A 50%, #E8B4A0 100%);
+            --ombre-luxe: 0 20px 60px rgba(42, 58, 92, 0.15);
+            --ombre-premium: 0 15px 40px rgba(232, 180, 160, 0.25);
+            --ombre-douce: 0 8px 25px rgba(0,0,0,0.08);
+            --transition-luxe: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        /* === RESET & BASE === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--noir-élégant);
+            background: var(--blanc-nacre);
+            overflow-x: hidden;
+        }
+
+        /* === TYPOGRAPHIE PREMIUM === */
+        h1, h2, h3 {
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            background: var(--gradient-premium);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 200;
+            letter-spacing: 0.05em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--navy-luxe);
+            margin-bottom: 1.5rem;
+            font-weight: 200;
+        }
+
+        h3 {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            color: var(--bronze-premium);
+            margin-bottom: 0.8rem;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--noir-élégant);
+            opacity: 0.85;
+            font-weight: 300;
+        }
+
+        /* === HEADER LUXE === */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 248, 246, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            z-index: 1000;
+            box-shadow: 0 1px 30px rgba(42, 58, 92, 0.08);
+            transition: var(--transition-luxe);
+            border-bottom: 1px solid rgba(232, 180, 160, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-space {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-premium);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--ombre-douce);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-space::before {
+            content: 'W';
+            font-size: 2rem;
+            font-weight: 300;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .logo-space::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 200;
+            background: var(--gradient-premium);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--noir-élégant);
+            font-weight: 300;
+            font-size: 1rem;
+            transition: var(--transition-luxe);
+            position: relative;
+            opacity: 0.8;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gradient-premium);
+            transition: var(--transition-luxe);
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+            color: var(--bronze-premium);
+        }
+
+        .nav-links a:hover::before {
+            width: 100%;
+        }
+
+        .cart-icon {
+            position: relative;
+            background: var(--gradient-premium);
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition-luxe);
+            border: none;
+            font-size: 1.1rem;
+            box-shadow: var(--ombre-premium);
+        }
+
+        .cart-icon:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: var(--ombre-luxe);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--navy-luxe);
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* === HERO SECTION PREMIUM === */
+        .hero {
+            height: 100vh;
+            background: var(--gradient-hero);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(232, 180, 160, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(42, 58, 92, 0.2) 0%, transparent 50%);
+            opacity: 0.8;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            color: white;
+            -webkit-text-fill-color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 20px rgba(42, 58, 92, 0.3);
+            filter: drop-shadow(0 2px 10px rgba(0,0,0,0.1));
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--blanc-nacre);
+            margin-bottom: 2rem;
+            font-weight: 200;
+            opacity: 0.95;
+            text-shadow: 0 2px 15px rgba(42, 58, 92, 0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: rgba(255,255,255,0.95);
+            color: var(--navy-luxe);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1.1rem;
+            transition: var(--transition-luxe);
+            box-shadow: var(--ombre-premium);
+            border: 2px solid transparent;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--blanc-nacre);
+            border-color: rgba(255,255,255,0.8);
+            transform: translateY(-3px);
+            box-shadow: var(--ombre-luxe);
+        }
+
+        /* === SECTIONS === */
+        .section {
+            padding: 6rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        /* === GAMME PRODUITS PREMIUM === */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--ombre-douce);
+            transition: var(--transition-luxe);
+            cursor: pointer;
+            border: 1px solid rgba(232, 180, 160, 0.1);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--ombre-luxe);
+            border-color: rgba(232, 180, 160, 0.3);
+        }
+
+        .product-image {
+            height: 280px;
+            background: var(--gradient-bottle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            background: var(--gradient-bottle);
+            border-radius: 50px 50px 15px 15px;
+            box-shadow: 
+                inset 0 0 30px rgba(255,255,255,0.1),
+                0 10px 30px rgba(42, 58, 92, 0.2);
+            transform: perspective(200px) rotateY(5deg);
+        }
+
+        .product-image::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 25px;
+            background: linear-gradient(135deg, var(--bronze-premium), #DAA520);
+            border-radius: 12px;
+            top: 25px;
+            box-shadow: 
+                0 3px 15px rgba(184, 134, 11, 0.3),
+                inset 0 1px 3px rgba(255,255,255,0.3);
+            transform: perspective(200px) rotateY(5deg);
+        }
+
+        .product-info {
+            padding: 2rem;
+            background: linear-gradient(180deg, white 0%, rgba(250, 248, 246, 0.5) 100%);
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: var(--bronze-premium);
+            margin-bottom: 1.5rem;
+            text-align: right;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            background: var(--gradient-premium);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 15px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: var(--transition-luxe);
+            font-size: 1rem;
+            box-shadow: var(--ombre-douce);
+        }
+
+        .add-to-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--ombre-premium);
+        }
+
+        /* === OFFRES SPÉCIALES === */
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .offer-card {
+            border-radius: 25px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: var(--ombre-douce);
+            transition: var(--transition-luxe);
+            border: 1px solid rgba(232, 180, 160, 0.2);
+        }
+
+        .offer-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--ombre-luxe);
+        }
+
+        .offer-card button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--ombre-premium);
+        }
+
+        /* === ABOUT SECTION LUXE === */
+        .about {
+            background: linear-gradient(135deg, var(--rose-poudrй) 0%, var(--blanc-nacre) 100%);
+            border-radius: 40px;
+            padding: 5rem 4rem;
+            margin: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--ombre-douce);
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(232, 180, 160, 0.1) 0%, transparent 70%);
+            animation: rotateGlow 20s linear infinite;
+        }
+
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .fusion-icons {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .fusion-icon {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.8);
+            border-radius: 25px;
+            box-shadow: var(--ombre-douce);
+            transition: var(--transition-luxe);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(232, 180, 160, 0.2);
+        }
+
+        .fusion-icon:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--ombre-premium);
+            background: rgba(255,255,255,0.95);
+        }
+
+        .fusion-icon::before {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background: var(--gradient-premium);
+            box-shadow: var(--ombre-premium);
+        }
+
+        /* === NEWSLETTER PREMIUM === */
+        .newsletter {
+            background: var(--gradient-hero);
+            color: white;
+            text-align: center;
+            padding: 5rem 4rem;
+            border-radius: 40px;
+            margin: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .newsletter h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 550px;
+            margin: 3rem auto 0;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            min-width: 280px;
+            padding: 1.2rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--ombre-douce);
+        }
+
+        .newsletter-form button {
+            padding: 1.2rem 2.5rem;
+            background: var(--bronze-premium);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: var(--transition-luxe);
+            box-shadow: var(--ombre-douce);
+        }
+
+        .newsletter-form button:hover {
+            background: var(--navy-luxe);
+            transform: translateY(-2px);
+            box-shadow: var(--ombre-premium);
+        }
+
+        /* === FOOTER LUXE === */
+        footer {
+            background: var(--noir-élégant);
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--rose-gold);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition-luxe);
+            font-weight: 300;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--rose-gold);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-premium);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition-luxe);
+            box-shadow: var(--ombre-douce);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: var(--ombre-premium);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(232, 180, 160, 0.2);
+            color: rgba(255,255,255,0.6);
+            font-weight: 300;
+        }
+
+        /* === MODALS PREMIUM === */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(28, 28, 30, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            max-width: 550px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: var(--ombre-luxe);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--noir-élégant);
+            transition: var(--transition-luxe);
+        }
+
+        .close-modal:hover {
+            color: var(--bronze-premium);
+            transform: scale(1.1);
+        }
+
+        .cart-items {
+            margin-bottom: 1.5rem;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--rose-poudrй);
+        }
+
+        .cart-total {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--bronze-premium);
+            text-align: right;
+            margin: 1.5rem 0;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background: var(--gradient-premium);
+            color: white;
+            border: none;
+            padding: 1.2rem;
+            border-radius: 15px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: var(--transition-luxe);
+            font-size: 1.1rem;
+            box-shadow: var(--ombre-douce);
+        }
+
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--ombre-premium);
+        }
+
+        /* === RESPONSIVE PREMIUM === */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .logo-container {
+                gap: 0.5rem;
+            }
+
+            .logo-space {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .hero-content {
+                padding: 0 1rem;
+            }
+            
+            .section {
+                padding: 4rem 1rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .fusion-icons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .newsletter-form input {
+                min-width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .about, .newsletter {
+                padding: 3rem 2rem;
+                margin: 3rem 0;
+            }
+
+            .offers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* === ANIMATIONS PREMIUM === */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* === SCROLLBAR PREMIUM === */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--rose-poudrй);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-premium);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--bronze-premium);
+        }
+
+        /* === EFFETS LUXE SUPPLÉMENTAIRES === */
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 49%, rgba(232, 180, 160, 0.1) 50%, transparent 51%);
+            opacity: 0;
+            transition: var(--transition-luxe);
+            pointer-events: none;
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="logo-space"></div>
+                <a href="#" class="logo-text">Waouel Cosmétique</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#offres">Offres</a></li>
+                <li><a href="#histoire">Notre Histoire</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="cart-icon" onclick="toggleCart()">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="accueil">
+        <div class="hero-content fade-in">
+            <h1>Waouel Cosmétique</h1>
+            <p class="hero-tagline">Pour des cheveux qui déchirent !</p>
+            <p style="color: var(--blanc-nacre); margin-bottom: 2rem; font-size: 1.2rem; font-weight: 300; opacity: 0.9;">
+                L'alliance parfaite entre l'innovation coréenne et les trésors marocains
+            </p>
+            <a href="#produits" class="cta-button">Découvrir nos produits</a>
+        </div>
+    </section>
+
+    <!-- SECTION PRODUITS -->
+    <section class="section" id="produits">
+        <div class="section-title">
+            <h2>Notre Gamme Premium</h2>
+            <p style="font-size: 1.2rem; color: var(--navy-luxe); opacity: 0.8; max-width: 600px; margin: 0 auto;">
+                Découvrez nos formules exclusives qui allient expertise K-beauty et secrets marocains
+            </p>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card" onclick="addToCart('Revival Elixir', 52)">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3>Revival Elixir</h3>
+                    <p>Shampoing anti-chute puissant enrichi au ginseng coréen et à l'huile de nigelle</p>
+                    <div class="product-price">52€</div>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="addToCart('Harmony Fusion', 45)">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3>Harmony Fusion</h3>
+                    <p>Shampoing universel à l'eau de riz fermentée et à l'huile d'argan première pression</p>
+                    <div class="product-price">45€</div>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="addToCart('Silk Ritual', 48)">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3>Silk Ritual</h3>
+                    <p>Après-shampoing nourrissant aux protéines de soie et au beurre de karité</p>
+                    <div class="product-price">48€</div>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="addToCart('Coffret Découverte', 125)">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3>Coffret Découverte</h3>
+                    <p>La routine complète Waouel dans un écrin luxueux</p>
+                    <div class="product-price">125€</div>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION OFFRES SPÉCIALES -->
+    <section class="section" id="offres">
+        <div class="section-title">
+            <h2>Offres Spéciales</h2>
+            <p style="font-size: 1.2rem; color: var(--navy-luxe); opacity: 0.8; max-width: 600px; margin: 0 auto;">
+                Profitez de nos promotions exclusives sur une sélection de produits
+            </p>
+        </div>
+
+        <div class="offers-grid">
+            <div class="offer-card" style="background: linear-gradient(135deg, var(--rose-poudrй) 0%, var(--blanc-nacre) 100%);">
+                <h3 style="color: var(--navy-luxe); margin-bottom: 1rem;">Pack Découverte</h3>
+                <p style="margin-bottom: 1.5rem;">2 shampoings + 1 après-shampoing</p>
+                <div style="font-size: 2rem; color: var(--bronze-premium); margin-bottom: 0.5rem; font-weight: 300;">125€</div>
+                <div style="text-decoration: line-through; color: var(--navy-luxe); opacity: 0.6; margin-bottom: 1.5rem;">145€</div>
+                <button onclick="addToCart('Pack Découverte', 125)" style="background: var(--gradient-premium); color: white; border: none; padding: 1rem 2rem; border-radius: 15px; cursor: pointer; transition: var(--transition-luxe); font-weight: 400;">Commander maintenant</button>
+            </div>
+            
+            <div class="offer-card" style="background: linear-gradient(135deg, var(--navy-luxe) 0%, rgba(42, 58, 92, 0.8) 100%); color: white;">
+                <h3 style="color: var(--rose-gold); margin-bottom: 1rem;">Livraison Gratuite</h3>
+                <p style="margin-bottom: 1.5rem;">Dès 75€ d'achat partout en France</p>
+                <div style="font-size: 1.5rem; margin-bottom: 1.5rem;">🚚 Livraison Express 24h</div>
+                <button onclick="showModal('Livraison gratuite dès 75€ d\'achat en France métropolitaine')" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 1rem 2rem; border-radius: 15px; cursor: pointer; transition: var(--transition-luxe); font-weight: 400; backdrop-filter: blur(10px);">En savoir plus</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION HISTOIRE -->
+    <section class="section" id="histoire">
+        <div class="about">
+            <div class="about-content">
+                <h2>L'Alliance de Deux Mondes</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                    Waouel Cosmétique est née de la rencontre extraordinaire entre l'innovation coréenne 
+                    et la sagesse ancestrale marocaine. Nous avons créé une nouvelle catégorie de soins 
+                    capillaires premium qui respecte et sublime la beauté naturelle de chaque chevelure.
+                </p>
+                
+                <div class="fusion-icons">
+                    <div class="fusion-icon">
+                        <h3>K-Beauty</h3>
+                        <p>Innovation scientifique</p>
+                    </div>
+                    <div class="fusion-icon">
+                        <h3>Trésors Marocains</h3>
+                        <p>Secrets ancestraux</p>
+                    </div>
+                    <div class="fusion-icon">
+                        <h3>Formules Clean</h3>
+                        <p>Sans sulfates ni silicones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section">
+        <div class="newsletter">
+            <h2>Rejoignez la Communauté Waouel</h2>
+            <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 1rem;">
+                Recevez nos conseils exclusifs et soyez les premiers informés de nos nouveautés
+            </p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" placeholder="Votre adresse email" required>
+                <button type="submit">S'abonner</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Waouel Cosmétique</h3>
+                <p style="margin-bottom: 1rem;">L'excellence capillaire réinventée</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Produits</h3>
+                <ul>
+                    <li><a href="#produits">Gamme Femme</a></li>
+                    <li><a href="#produits">Gamme Homme</a></li>
+                    <li><a href="#produits">Coffrets</a></li>
+                    <li><a href="#produits">Nouveautés</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Service Client</h3>
+                <ul>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" onclick="showModal('Livraison gratuite dès 75€ d\'achat')">Livraison</a></li>
+                    <li><a href="#" onclick="showModal('Retour gratuit sous 30 jours')">Retours</a></li>
+                    <li><a href="#" onclick="showModal('Guide des tailles disponible')">Guide</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <ul>
+                    <li><a href="#" onclick="showModal('Mentions légales Waouel Cosmétique SAS')">Mentions légales</a></li>
+                    <li><a href="#" onclick="showModal('CGV Waouel Cosmétique')">CGV</a></li>
+                    <li><a href="#" onclick="showModal('Politique de confidentialité')">Confidentialité</a></li>
+                    <li><a href="#" onclick="showModal('Nous contacter')">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Waouel Cosmétique. Tous droits réservés. | Fait avec ❤️ en France</p>
+        </div>
+    </footer>
+
+    <!-- MODAL PANIER -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Votre Panier</h3>
+                <button class="close-modal" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p>Votre panier est vide</p>
+            </div>
+            <div class="cart-total" id="cartTotal">Total: 0€</div>
+            <button class="checkout-btn" onclick="checkout()">Finaliser la commande</button>
+        </div>
+    </div>
+
+    <!-- MODAL GENERAL -->
+    <div id="generalModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Information</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div id="modalContent">
+                <p>Contenu du modal</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // === GESTION DU PANIER ===
+        let cart = [];
+        let cartTotal = 0;
+
+        function addToCart(productName, price) {
+            const existingItem = cart.find(item => item.name === productName);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: productName,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            updateCartDisplay();
+            showNotification(`${productName} ajouté au panier !`);
+        }
+
+        function removeFromCart(productName) {
+            cart = cart.filter(item => item.name !== productName);
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartCount = document.getElementById('cartCount');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotalElement = document.getElementById('cartTotal');
+            
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            cartCount.textContent = totalItems;
+            cartTotalElement.textContent = `Total: ${cartTotal}€`;
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p>Votre panier est vide</p>';
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div>
+                            <strong>${item.name}</strong><br>
+                            <span style="color: var(--bronze-premium);">${item.price}€ x ${item.quantity}</span>
+                        </div>
+                        <button onclick="removeFromCart('${item.name}')" style="background: var(--rose-gold); color: white; border: none; padding: 0.5rem 1rem; border-radius: 10px; cursor: pointer;">Retirer</button>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cartModal');
+            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Votre panier est vide !');
+                return;
+            }
+            alert(`Commande de ${cartTotal}€ en cours de traitement... Merci pour votre confiance !`);
+            cart = [];
+            updateCartDisplay();
+            toggleCart();
+        }
+
+        // === GESTION DES MODALS ===
+        function showModal(content) {
+            const modal = document.getElementById('generalModal');
+            const modalContent = document.getElementById('modalContent');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalTitle.textContent = 'Information';
+            modalContent.innerHTML = `<p>${content}</p>`;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('generalModal').style.display = 'none';
+        }
+
+        // === NEWSLETTER ===
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            showNotification(`Merci ${email} ! Vous êtes maintenant abonné(e) à notre newsletter.`);
+            event.target.reset();
+        }
+
+        // === NOTIFICATIONS ===
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: var(--gradient-premium);
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 15px;
+                box-shadow: var(--ombre-premium);
+                z-index: 3000;
+                font-weight: 400;
+                animation: slideInRight 0.5s ease-out;
+            `;
+            notification.textContent = message;
+            
+            if (!document.querySelector('#notificationStyles')) {
+                const style = document.createElement('style');
+                style.id = 'notificationStyles';
+                style.textContent = `
+                    @keyframes slideInRight {
+                        from { transform: translateX(100%); opacity: 0; }
+                        to { transform: translateX(0); opacity: 1; }
+                    }
+                    @keyframes slideOutRight {
+                        from { transform: translateX(0); opacity: 1; }
+                        to { transform: translateX(100%); opacity: 0; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.5s ease-out';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 500);
+            }, 3000);
+        }
+
+        // === SMOOTH SCROLLING ET INTERACTIONS ===
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling pour les liens internes
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Fermer les modals en cliquant à l'extérieur
+            window.addEventListener('click', function(event) {
+                const cartModal = document.getElementById('cartModal');
+                const generalModal = document.getElementById('generalModal');
+                
+                if (event.target === cartModal) {
+                    cartModal.style.display = 'none';
+                }
+                if (event.target === generalModal) {
+                    generalModal.style.display = 'none';
+                }
+            });
+
+            // Animation d'apparition au scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                    }
+                });
+            }, observerOptions);
+
+            // Observer tous les éléments avec animation
+            document.querySelectorAll('.product-card, .fusion-icon, .footer-section, .offer-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                observer.observe(el);
+            });
+
+            // Effet parallaxe léger sur le hero
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const parallax = document.querySelector('.hero');
+                if (parallax) {
+                    parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+            });
+        });
+
+        // === AMÉLIORATION DE L'HEADER AU SCROLL ===
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(250, 248, 246, 0.98)';
+                header.style.boxShadow = 'var(--ombre-premium)';
+            } else {
+                header.style.background = 'rgba(250, 248, 246, 0.95)';
+                header.style.boxShadow = '0 1px 30px rgba(42, 58, 92, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html>
+
