@@ -105,7 +105,6 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
         }
 
         .logo-space {
@@ -119,6 +118,13 @@
             box-shadow: var(--ombre-douce);
             position: relative;
             overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition-luxe);
+        }
+
+        .logo-space:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: var(--ombre-premium);
         }
 
         .logo-space::before {
@@ -143,17 +149,6 @@
         @keyframes shimmer {
             0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
             100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 200;
-            background: var(--gradient-premium);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-            letter-spacing: 0.05em;
         }
 
         .nav-links {
@@ -422,33 +417,6 @@
             box-shadow: var(--ombre-premium);
         }
 
-        /* === OFFRES SPÉCIALES === */
-        .offers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .offer-card {
-            border-radius: 25px;
-            padding: 2.5rem;
-            text-align: center;
-            box-shadow: var(--ombre-douce);
-            transition: var(--transition-luxe);
-            border: 1px solid rgba(232, 180, 160, 0.2);
-        }
-
-        .offer-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--ombre-luxe);
-        }
-
-        .offer-card button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--ombre-premium);
-        }
-
         /* === ABOUT SECTION LUXE === */
         .about {
             background: linear-gradient(135deg, var(--rose-poudrй) 0%, var(--blanc-nacre) 100%);
@@ -650,11 +618,29 @@
             text-decoration: none;
             transition: var(--transition-luxe);
             box-shadow: var(--ombre-douce);
+            font-size: 1.2rem;
         }
 
         .social-icon:hover {
             transform: translateY(-3px) scale(1.1);
             box-shadow: var(--ombre-premium);
+        }
+
+        /* Styles spécifiques pour chaque réseau social */
+        .social-icon:nth-child(1):hover {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        }
+
+        .social-icon:nth-child(2):hover {
+            background: linear-gradient(45deg, #0077B5, #00A0DC);
+        }
+
+        .social-icon:nth-child(3):hover {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+        }
+
+        .social-icon:nth-child(4):hover {
+            background: linear-gradient(45deg, #EA4335, #FBBC05);
         }
 
         .footer-bottom {
@@ -759,19 +745,6 @@
                 display: none;
             }
             
-            .logo-container {
-                gap: 0.5rem;
-            }
-
-            .logo-space {
-                width: 50px;
-                height: 50px;
-            }
-
-            .logo-text {
-                font-size: 1.2rem;
-            }
-            
             .hero-content {
                 padding: 0 1rem;
             }
@@ -803,10 +776,6 @@
             .about, .newsletter {
                 padding: 3rem 2rem;
                 margin: 3rem 0;
-            }
-
-            .offers-grid {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -869,12 +838,10 @@
         <nav>
             <div class="logo-container">
                 <div class="logo-space"></div>
-                <a href="#" class="logo-text">Waouel Cosmétique</a>
             </div>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#produits">Produits</a></li>
-                <li><a href="#offres">Offres</a></li>
                 <li><a href="#histoire">Notre Histoire</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -949,33 +916,6 @@
         </div>
     </section>
 
-    <!-- SECTION OFFRES SPÉCIALES -->
-    <section class="section" id="offres">
-        <div class="section-title">
-            <h2>Offres Spéciales</h2>
-            <p style="font-size: 1.2rem; color: var(--navy-luxe); opacity: 0.8; max-width: 600px; margin: 0 auto;">
-                Profitez de nos promotions exclusives sur une sélection de produits
-            </p>
-        </div>
-
-        <div class="offers-grid">
-            <div class="offer-card" style="background: linear-gradient(135deg, var(--rose-poudrй) 0%, var(--blanc-nacre) 100%);">
-                <h3 style="color: var(--navy-luxe); margin-bottom: 1rem;">Pack Découverte</h3>
-                <p style="margin-bottom: 1.5rem;">2 shampoings + 1 après-shampoing</p>
-                <div style="font-size: 2rem; color: var(--bronze-premium); margin-bottom: 0.5rem; font-weight: 300;">125€</div>
-                <div style="text-decoration: line-through; color: var(--navy-luxe); opacity: 0.6; margin-bottom: 1.5rem;">145€</div>
-                <button onclick="addToCart('Pack Découverte', 125)" style="background: var(--gradient-premium); color: white; border: none; padding: 1rem 2rem; border-radius: 15px; cursor: pointer; transition: var(--transition-luxe); font-weight: 400;">Commander maintenant</button>
-            </div>
-            
-            <div class="offer-card" style="background: linear-gradient(135deg, var(--navy-luxe) 0%, rgba(42, 58, 92, 0.8) 100%); color: white;">
-                <h3 style="color: var(--rose-gold); margin-bottom: 1rem;">Livraison Gratuite</h3>
-                <p style="margin-bottom: 1.5rem;">Dès 75€ d'achat partout en France</p>
-                <div style="font-size: 1.5rem; margin-bottom: 1.5rem;">🚚 Livraison Express 24h</div>
-                <button onclick="showModal('Livraison gratuite dès 75€ d\'achat en France métropolitaine')" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 1rem 2rem; border-radius: 15px; cursor: pointer; transition: var(--transition-luxe); font-weight: 400; backdrop-filter: blur(10px);">En savoir plus</button>
-            </div>
-        </div>
-    </section>
-
     <!-- SECTION HISTOIRE -->
     <section class="section" id="histoire">
         <div class="about">
@@ -1026,10 +966,10 @@
                 <h3>Waouel Cosmétique</h3>
                 <p style="margin-bottom: 1rem;">L'excellence capillaire réinventée</p>
                 <div class="social-icons">
-                    <a href="#" class="social-icon">📘</a>
-                    <a href="#" class="social-icon">📷</a>
-                    <a href="#" class="social-icon">🐦</a>
-                    <a href="#" class="social-icon">💼</a>
+                    <a href="https://instagram.com/waouelcosmetic" target="_blank" class="social-icon">📷</a>
+                    <a href="https://linkedin.com/company/waouel-cosmetic" target="_blank" class="social-icon">💼</a>
+                    <a href="https://wa.me/33123456789" target="_blank" class="social-icon">💬</a>
+                    <a href="mailto:contact@waouel-cosmetic.com" class="social-icon">📧</a>
                 </div>
             </div>
             
@@ -1279,7 +1219,7 @@
             }, observerOptions);
 
             // Observer tous les éléments avec animation
-            document.querySelectorAll('.product-card, .fusion-icon, .footer-section, .offer-card').forEach(el => {
+            document.querySelectorAll('.product-card, .fusion-icon, .footer-section').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
                 observer.observe(el);
@@ -1309,4 +1249,3 @@
     </script>
 </body>
 </html>
-
